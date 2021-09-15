@@ -1,0 +1,22 @@
+ -- Jack Volonte -- 
+
+SQL COMMANDS USED:
+1. CREATE DATABASE CHEESECAKE;
+2. use CHEESECAKE;
+3. 
+	CREATE TABLE ORDERS (
+		-> ORDERID INT NOT NULL,
+		-> MONTH CHAR(3) NOT NULL,
+		-> DAY INT NOT NULL,
+		-> QUANTITY INT NOT NULL,
+		-> TOPPING enum('plain', 'cherry', 'chocolate')
+		-> NOTES VARCHAR(512));
+	);
+4. describe ORDERS;
+6.
+ SELECT *
+	-> FROM ORDERS;
+7.
+	SELECT * FROM ORDERS WHERE MONTH='feb' AND  TOPPING="plain";
+		output = 7.
+8. INSERT INTO ORDERS (ORDERID, MONTH, DAY, QUANTITY, TOPPING, NOTES) VALUES (62,'FEB', 25, 2, 'cherry', "" );
